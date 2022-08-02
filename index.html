@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Level</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <script>
+        function sum() {
+            let counter = 0;
+            return (num) => {
+                counter += num;
+                console.log(counter);
+            };
+        }
+        let count = outer();
+        count(3);
+        count(5);
+        count(228);
+
+        function outer1() {
+            let array = [];
+            return (item) => {
+                if (item) {
+                    array.push(item);
+                }
+                else {
+                    array = [];
+                }
+                return array;
+            };
+        }
+
+        let getUpdatedArr = outer1();
+
+        console.log(getUpdatedArr(3));
+        console.log(getUpdatedArr(5));
+        console.log({ name: 'Vasya' });
+        console.log(getUpdatedArr());
+        console.log(getUpdatedArr(4));
+    </script>
+
+</body>
+<footer>
+
+</footer>
+
+</html>
